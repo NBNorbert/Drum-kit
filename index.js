@@ -2,16 +2,15 @@
 
 var numberOfButton = document.querySelectorAll(".drum").length;
 
-for (var i=0; i<numberOfButton; i++) {
+for (var i = 0; i < numberOfButton; i++) {
 
-    document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
 
         var buttonInnerHtml = this.innerHTML;
 
         makeSound(buttonInnerHtml);
 
         buttonAnimation(buttonInnerHtml);
-        
 
     });
 
@@ -20,7 +19,7 @@ for (var i=0; i<numberOfButton; i++) {
 // Detecting Keyboard Press
 
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
 
     makeSound(event.key);
 
@@ -31,81 +30,55 @@ document.addEventListener("keydown", function(event) {
 function makeSound(key) {
     switch (key) {
         case "w":
-                var tom1 = new Audio('sounds/tom-1.mp3');
-                tom1.play();
-        break;
+            var tom1 = new Audio('sounds/tom-1.mp3');
+            tom1.play();
+            break;
 
         case "a":
-                var tom2 = new Audio("sounds/tom-2.mp3");
-                tom2.play();
-        break;
+            var tom2 = new Audio("sounds/tom-2.mp3");
+            tom2.play();
+            break;
 
         case "s":
             var tom3 = new Audio("sounds/tom-3.mp3");
             tom3.play();
-        break;
+            break;
 
         case "d":
             var tom4 = new Audio("sounds/tom-4.mp3");
             tom4.play();
-        break;
+            break;
 
         case "j":
             var snare = new Audio("sounds/snare.mp3");
             snare.play();
-        break;
+            break;
 
         case "k":
             var crash = new Audio("sounds/crash.mp3");
             crash.play();
-        break;
+            break;
 
         case "l":
             var kick = new Audio("sounds/kick-bass.mp3");
             kick.play();
-        break;
+            break;
 
         default: console.log();
-    
- }
+
+    }
 
 }
 
-function buttonAnimation (currentKey) {
+function buttonAnimation(currentKey) {
 
-  var activeButton = document.querySelector("." + currentKey);
+    var activeButton = document.querySelector("." + currentKey);
 
-  activeButton.classList.add("pressed");
+    activeButton.classList.add("pressed");
 
-  setTimeout(function(){
+    setTimeout(function () {
 
-    activeButton.classList.remove("pressed");
-}, 100);
+        activeButton.classList.remove("pressed");
+    }, 100);
 
 }
-
-
-// Original explained solution
-// document.querySelector("button").addEventListener("click", handleClick);
-
-// function handleClick () {
-//     alert("I got clicked!");
-// }
-
-// var audio = new Audio("sounds/tom-1.mp3");
-// audio.play();
-
-
-// this statement explained
-
-// var numberOfButton = document.querySelectorAll(".drum").length;
-
-// for (var i=0; i<numberOfButton; i++) {
-
-//     document.querySelectorAll(".drum")[i].addEventListener("click", function() {
-        
-//      this.style.color = "white";
-
-//     });
-
-// }
