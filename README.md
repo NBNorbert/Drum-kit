@@ -4,7 +4,7 @@ Let the music flow and your drumming skills shine.
 	
 ## Brief description
 This is a website built to showcase my technical skills at the point of learning about JavaScript and DOM for the first time.
-I haven't done any updates to the site since because I wanted it to clearly dislay my learning process from the beginning to my current level.
+I haven't done any updates to the site since because I wanted it to clearly display my learning process from the beginning to my current level.
 
 ## Technologies Used
 
